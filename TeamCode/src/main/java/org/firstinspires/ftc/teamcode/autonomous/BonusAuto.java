@@ -6,6 +6,8 @@ public class BonusAuto {
   // You will need to use the MecanumDrive class to drive the robot. Use the field Oriented drive
   // method.
 
+    //Do Field Oriented Drive first!
+
   // Can you make an auto that will drive forward, stop, rotate 180 degrees, and return to the same
   // spot?
 }

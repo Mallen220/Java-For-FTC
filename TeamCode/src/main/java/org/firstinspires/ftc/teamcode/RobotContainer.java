@@ -31,7 +31,7 @@ public class RobotContainer extends OpMode {
   @Override
   public void loop() {
 
-    final double forwardInput = -gamepad1.left_stick_y;
+    final double forwardInput = gamepad1.left_stick_y;
     final double strafeInput = gamepad1.left_stick_x;
     final double rotateInput = gamepad1.right_stick_x;
 
@@ -39,15 +39,10 @@ public class RobotContainer extends OpMode {
         !isWithinTolerance(0, gamepad1.left_stick_y, 0.05)
             || !isWithinTolerance(0, gamepad1.left_stick_x, 0.05)
             || !isWithinTolerance(0, gamepad1.right_stick_x, 0.05);
-
     if (driveSticksActive) {
-      drive.driveFieldRelative(forwardInput, strafeInput, rotateInput);
+      //TODO: Call drive, passing in the forward, strafe, and rotate inputs
     } else {
       drive.stop();
-    }
-
-    if (gamepad2.b) {
-      drive.resetYaw();
     }
 
     if (gamepad2.dpad_up) {
